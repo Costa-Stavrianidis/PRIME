@@ -25,6 +25,7 @@ These files contain posterior summary statistics for all modeled regions.
 To reproduce the PRIME analysis, first clone the repository:
 
 git clone https://github.com/Costa-Stavrianidis/PRIME.git
+
 cd PRIME
 
 The analysis is performed in R and requires JAGS to be installed. The pipeline should be run in the following order:
