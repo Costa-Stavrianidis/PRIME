@@ -16,7 +16,7 @@ Final processed summary files are provided in the `data/` directory. Two sets of
 - **Exon-based regions** (defined by Ensembl exon boundaries):
   `PRIME_exon_estimates.xlsx`
 
-These files contain posterior summary statistics for all modeled regions.
+These files contain posterior summary statistics for all modeled regions. Column definitions for each file are provided in the `docs/` directory.
 
 ---
 
