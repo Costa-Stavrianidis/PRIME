@@ -1,8 +1,8 @@
 # PRIME
 
-PRIME (Probabilistic Regional Intolerance to Missense Estimation) is a Bayesian hierarchical modeling approach for measuring intolerance, or constraint, at sub-genic resolution across coding regions of the $
+PRIME (Probabilistic Regional Intolerance to Missense Estimation) is a Bayesian hierarchical modeling approach for measuring intolerance, or constraint, at sub-genic resolution across coding regions of the genome. The model estimates the probability that a variant observed in the population is missense within a genomic region using gnomAD v4 exome and genome sequencing data. Regions under stronger purifying selection are expected to have lower probabilities, reflecting a depletion of functional variants in the population.
 
-Through its beta–binomial hierarchical structure, PRIME induces shrinkage on sub-genic estimates of intolerance by allowing them to be jointly informed by other regions within the same gene and by genes acr$
+Through its beta–binomial hierarchical structure, PRIME induces shrinkage on sub-genic estimates of intolerance by allowing them to be jointly informed by other regions within the same gene and by genes across the genome. This borrowing of information stabilizes estimates in regions with sparse variant counts. The Bayesian framework also yields full posterior distributions for each region, enabling principled quantification of uncertainty in the intolerance estimates.
 
 ---
 
