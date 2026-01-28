@@ -1,0 +1,22 @@
+
+  model {
+    # Subregions
+    for (sIdx in 1:Nsubr) {
+        x[sIdx] ~ dbin(theta[sIdx], N[sIdx])
+        theta[sIdx] ~ dbeta(omega[g[sIdx]] * (kappa[g[sIdx]] - 2) + 1, 
+                            (1 - omega[g[sIdx]]) * (kappa[g[sIdx]] - 2) + 1)
+    }
+
+    # Genes
+    for (gIdx in 1:Ngene) {
+        omega[gIdx] ~ dbeta(omegaO * (kappaO - 2) + 1, 
+                            (1 - omegaO) * (kappaO - 2) + 1)
+        kappa[gIdx] <- kappaMinusTwo[gIdx] + 2
+        kappaMinusTwo[gIdx] ~ dgamma(3, 0.1) T(0.001, )  # mean 30, truncated to avoid instability
+    }
+
+    # Genome
+    omegaO ~ dbeta(1.0, 1.0)
+    kappaO <- 10  # fixed concentration for genome prior
+  }
+  
